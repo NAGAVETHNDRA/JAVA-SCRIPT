@@ -1,0 +1,88 @@
+<!DOCTYPE html> 
+<html> <head> 
+<title>JS- Updating DOM </title> 
+<style> 
+div{
+    height: 100px;
+    width: 300px;
+    background-color: bisque;
+    font-size: 50px;
+    text-align: center;
+    padding-top: 20px;
+}
+span{
+    font-size: 20px;
+}
+
+</style> </head> 
+<body onload="formatTime();"> 
+<div id="mydiv"> </div>
+<form name="myclock">
+    <span><input type="radio" id="formt-12" name="mytime" checked>12HOurs Format</span>
+    <span><input type="radio" id="formt-24" name="mytime">24HOurs Format</span>
+</form>
+<script> 
+function myprint(data){
+    var mydiv = document.getElementById("mydiv");
+    mydiv.innerHTML=mydiv.innerHTML+data +"<br/>";
+}
+myprint("<U> Date objects 2<U/>");
+    function formatTime(){
+        var cd = new Date();
+        var hh = cd.getHours();
+        var mm= cd.getMinutes();
+        var ss = cd.getSeconds();
+
+        var dstr = hh +":"+mm+":"+ss;
+
+        document.getElementById("mydiv").innerHTML=dstr;
+        //setTimeout("formatTime()",1000)
+
+        if(document.myclock.mytime[0].checked){
+            if(mm<=9){
+                mm = "0"+mm
+            }
+
+            if(ss<=9){
+                ss="0"+ss;
+            }
+
+            if(hh>12){
+                hh= hh-12;
+                ad="PM"
+            }
+            else{
+                hh=hh;
+                ad="AM"
+            }
+
+            if(hh==12){
+                ad ="PM"
+            }
+            if(hh == "00"){
+                hh="12"
+
+            }
+            dstr=((hh<=9)?"0"+hh:hh)+":"+mm+":"+ss+ad;
+            document.getElementById("mydiv").innerHTML=dstr;
+        }
+
+        if(document.myclock.mytime[1].checked){
+            if(mm<=9){
+                mm="0"+mm
+            }if(ss<=9){
+                ss="0"+ss
+            }
+            if(hh<=9){
+                hh="0"+hh;
+            }
+            dstr=((hh<=9)?"0"+hh:hh)+":"+mm+":"+ss
+            document.getElementById("mydiv").innerHTML=dstr;
+         }
+         setTimeout("formatTime()",1000);
+            
+    }
+    
+   
+</script> 
+</body> 

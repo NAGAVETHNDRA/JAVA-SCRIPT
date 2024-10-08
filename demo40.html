@@ -1,0 +1,57 @@
+<!DOCTYPE html> 
+<html> <head> 
+<title>JS- Updating DOM </title> 
+<style> 
+div{ 
+margin: 50px; 
+border: 2px solid rgb(67, 12, 218); 
+border-radius: 15px; 
+width: 500px; 
+font-size: 25px; 
+background-color: rgb(154, 204, 234); 
+text-align: center; 
+padding: 15px; 
+color: black;
+font-size: 25px;
+} 
+</style> </head> 
+<body> 
+<div id="mydiv"> </div>
+<script> 
+function myprint(data){
+    var mydiv = document.getElementById("mydiv");
+    mydiv.innerHTML=mydiv.innerHTML+data +"<br/>";
+}
+myprint("<U>Custome objects 1<U/>");
+    var cust = {
+        cid:101,
+        cname:"sri",
+        email:"sri@gm.com",
+        phone:234432
+    }
+    console.log(cust);
+    myprint(typeof cust);
+    myprint("acces object properties 1");
+    myprint(cust.cid);
+    myprint(cust.cname);
+    myprint(cust.email);
+    myprint(cust.phone);
+    myprint("acces object properties 2");
+    myprint(cust["cid"]);
+    myprint(cust["cname"]);
+    myprint(cust["email"]);
+    myprint(cust["phone"]);
+
+    myprint('updating object properties');
+    cust.cname="venkatesh";
+    cust.phone=9390548541
+    cust.email="vk@gmail.com";
+    myprint(cust.cid);
+    myprint(cust.cname);
+    myprint(cust.email);
+    myprint(cust.phone);
+    console.log(cust);
+ 
+
+</script> 
+</body> 

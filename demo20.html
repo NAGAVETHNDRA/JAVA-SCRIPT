@@ -1,0 +1,64 @@
+<!DOCTYPE html> 
+<html> <head> 
+<title>JS- Updating DOM </title> 
+<style> 
+div{ 
+margin: 50px; 
+border: 2px solid rgb(67, 12, 218); 
+border-radius: 15px; 
+width: 500px; 
+font-size: 25px; 
+background-color: rgb(154, 204, 234); 
+text-align: center; 
+padding: 15px; 
+color: black;
+font-size: 25px;
+} 
+</style> </head> 
+<body> 
+<div id="mydiv"> </div>
+<script> 
+function myprint(data){
+    var mydiv = document.getElementById("mydiv");
+    mydiv.innerHTML=mydiv.innerHTML+data +"<br/>";
+}
+myprint("<u>Literals<br/><u/>");
+    x = 101
+    myprint(x)
+    myprint(typeof x);
+    //x=0101;//65
+    myprint(x);
+
+    x = 0X101;
+    myprint(x);//257
+    x=0B101;
+    myprint(x);//5
+
+    x = 9.9;
+    myprint(x);
+    x=9.999E1;
+    myprint(x)//99.99
+
+    x=true;
+    myprint(x)
+    myprint(typeof x)
+    x=false;
+    myprint(x)
+
+    x="hello"
+    myprint(x);
+    x='B'
+    myprint(x)
+
+    x="\u0044"
+    myprint(x)//D
+
+    x="\u0040\u0041\u0042\u0043\u0044"
+    myprint(x)//@ABCD
+
+   // x="\100\101\102\103"//D
+    myprint(x)
+   
+</script> 
+</body> 
+</html> 

@@ -1,0 +1,95 @@
+<!DOCTYPE html> 
+<html> <head> 
+<title>JS- Updating DOM </title> 
+<style> 
+div{ 
+margin: 50px; 
+border: 2px solid rgb(67, 12, 218); 
+border-radius: 15px; 
+width: 500px; 
+font-size: 25px; 
+background-color: rgb(154, 204, 234); 
+text-align: center; 
+padding: 15px; 
+color: black;
+font-size: 25px;
+} 
+</style> </head> 
+<body> 
+<div id="mydiv"> </div>
+<script> 
+function myprint(data){
+    var mydiv = document.getElementById("mydiv");
+    mydiv.innerHTML=mydiv.innerHTML+data +"<br/>";
+}
+myprint("<U>Custome objects 2<U/>");
+    var cust = {
+        cid:101,
+        cname:"sri",
+        email:["sri@gm.com","vas@gmai"],
+        phone:234432,
+        active:true,
+        address:{
+            city:"banglore",
+            state:"ka"
+        },
+        isCustomerActive:function(){
+            return this.active;
+        },
+        getCity:function(){
+            return this.address.city;
+        },
+        getPhone:function(){
+            return this.phone;
+        },
+        getName:function(){
+            return this.cname;
+        },
+        getCid:function(){
+            return this.cid;
+        },
+        getEmail:function(){
+            return this.email;
+        },
+        setCid:function(cid){
+            this.cid=cid;
+        },
+        setCname:function(cname){
+            this.cname=cname;
+        },
+        SetPhone:function(phone){
+            this.phone=phone;
+        }
+        
+    }
+    console.log(cust);
+    myprint(typeof cust);
+    myprint("acces object properties 1");
+    myprint(cust.cid);
+    myprint(cust.cname);
+    myprint(cust.email);
+    myprint(cust.phone);
+    myprint(cust.active);
+    myprint(cust.email[1]);
+    myprint(cust.email[0]);
+    myprint(cust.address.city);
+    myprint(cust.address.state);
+
+    myprint("way to call Object Functions");
+   myprint(cust.getCid());
+   myprint(cust.getName());
+   myprint(cust.getPhone());
+   myprint(cust.getEmail());
+   cust.setCname("venkatesh");
+   cust.SetPhone(99898);
+   myprint(cust.getCid());
+   myprint(cust.cname);
+   myprint(cust.phone);
+
+
+   
+
+   
+
+</script> 
+</body> 

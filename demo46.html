@@ -1,0 +1,51 @@
+<!DOCTYPE html> 
+<html> <head> 
+<title>JS- Updating DOM </title> 
+<style> 
+div{ 
+margin: 50px; 
+border: 2px solid rgb(67, 12, 218); 
+border-radius: 15px; 
+width: 500px; 
+font-size: 25px; 
+background-color: rgb(154, 204, 234); 
+text-align: center; 
+padding: 15px; 
+color: black;
+font-size: 25px;
+} 
+</style> </head> 
+<body> 
+<div id="mydiv"> </div>
+<script> 
+function myprint(data){
+    var mydiv = document.getElementById("mydiv");
+    mydiv.innerHTML=mydiv.innerHTML+data +"<br/>";
+}
+myprint("<U>Number objects 5<U/>");
+   
+    var x = "10"
+    var y = "20"
+    var z = x+y
+myprint(z);
+
+var a = parseInt(x);
+var b = parseInt(y);
+var c = a+b;
+myprint(c);
+
+var x = "10.34"
+    var y = "20.54"
+    var z = x+y
+myprint(z);
+
+var a = parseFloat(x);
+var b = parseFloat(y);
+var c = a+b;
+myprint(c);
+
+var p = "jlc"
+var q = parseFloat(p);
+myprint(q);
+</script> 
+</body> 

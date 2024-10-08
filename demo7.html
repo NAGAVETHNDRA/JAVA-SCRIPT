@@ -1,0 +1,59 @@
+<!DOCTYPE html> 
+<html> <head> 
+<title>JS- Updating DOM </title> 
+<style> 
+div{ 
+margin: 50px; 
+border: 2px solid red; 
+border-radius: 15px; 
+width: 500px; 
+font-size: 25px; 
+background-color: goldenrod; 
+text-align: center; 
+padding: 15px; 
+} 
+</style> </head> 
+<body> 
+<div id="mydiv"> </div>
+<script> 
+function myprint(data){
+    var mydiv = document.getElementById("mydiv");
+    mydiv.innerHTML=mydiv.innerHTML+data +"<br/>";
+}
+myprint("<u>Data Types & variables<br/><u/>")
+
+    var x = 10;
+    myprint(x);
+    myprint(typeof(x));
+
+    x = true;
+    myprint(x);
+    myprint(typeof(x));
+
+    //let x = 30;
+
+    myprint(x);
+
+    //let x = false;
+    x = false;
+    myprint(x);
+    myprint(typeof(x));
+
+    x = "venkatesh";
+    myprint(x);
+    myprint(typeof(x));
+
+    x = 99.99;
+    myprint(x);
+    myprint(typeof(x));
+
+    x = [10,20,289];
+    myprint(x);
+    myprint(typeof(x));
+
+
+    
+
+</script> 
+</body> 
+</html> 

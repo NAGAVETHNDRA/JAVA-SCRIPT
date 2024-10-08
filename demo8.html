@@ -1,0 +1,55 @@
+<!DOCTYPE html> 
+<html> <head> 
+<title>JS- Updating DOM </title> 
+<style> 
+div{ 
+margin: 50px; 
+border: 2px solid red; 
+border-radius: 15px; 
+width: 500px; 
+font-size: 25px; 
+background-color: goldenrod; 
+text-align: center; 
+padding: 15px; 
+} 
+</style> </head> 
+<body> 
+<div id="mydiv"> </div>
+<script> 
+function myprint(data){
+    var mydiv = document.getElementById("mydiv");
+    mydiv.innerHTML=mydiv.innerHTML+data +"<br/>";
+}
+myprint("<u>variables scope<br/><u/>")
+    var x = 10;// golbal scope
+    function show(){
+        var y = 20;// function scope
+        if(true){
+            var z = 30;// block scope
+            myprint("local"+z);
+            myprint("function"+y);
+            myprint("golbal"+x);
+        }
+        
+            myprint("local"+z);
+            myprint("function"+y);
+            myprint("golbal"+x);
+
+    }
+
+        myprint("outsid"+x);
+        //myprint(y);
+        //myprint(z);
+
+    show();
+
+
+
+
+
+
+    
+
+</script> 
+</body> 
+</html> 

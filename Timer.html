@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <style>
+        div{
+            width: 300px;
+            height: 200px;
+            border: 2px solid rgb(17, 161, 228);
+            background-color: aquamarine;
+            text-align: center;
+            font-size: 30px;
+            padding-top: 30px;
+            
+        }
+    </style>
+</head>
+<body onload="formatTime();">
+    <div id="mydiv"><h2>Timer</h2></div>
+
+    <script>
+        function formatTime(){
+        var dueDate = new Date();
+
+        dueDate.setHours(0);
+        dueDate.setMinutes(0);
+        dueDate.setSeconds(0);
+
+        var hh = dueDate.getHours();
+        var mm = dueDate. getMinutes();
+        var ss = dueDate.getSeconds();
+        var dstr = hh+":"+mm+":"+ss;
+        document.getElementById("mydiv").innerHTML = dstr;
+        setTimeout("formatTime()",1000);
+
+     }
+
+    </script>
+</body>
+</html>

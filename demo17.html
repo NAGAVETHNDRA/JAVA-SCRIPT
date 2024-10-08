@@ -1,0 +1,72 @@
+<!DOCTYPE html> 
+<html> <head> 
+<title>JS- Updating DOM </title> 
+<style> 
+div{ 
+margin: 50px; 
+border: 2px solid rgb(67, 12, 218); 
+border-radius: 15px; 
+width: 500px; 
+font-size: 25px; 
+background-color: rgb(154, 204, 234); 
+text-align: center; 
+padding: 15px; 
+color: black;
+font-size: 25px;
+} 
+</style> </head> 
+<body> 
+<div id="mydiv"> </div>
+<script> 
+function myprint(data){
+    var mydiv = document.getElementById("mydiv");
+    mydiv.innerHTML=mydiv.innerHTML+data +"<br/>";
+}
+myprint("<u> Bitwise Operator<br/><u/>")
+   var a = 19;
+   myprint(a)
+   myprint(typeof a);
+   a = 9.9
+   myprint(a);
+   myprint(typeof a);
+   a = "hello"
+   myprint(a)
+   myprint(typeof a)
+
+   var str = new String("hello");
+   myprint(str)
+   myprint(typeof str)
+
+   var arr = new Array(8);
+   arr[0] = 10;
+   arr[2] = 60;
+   arr[4] = 29;
+   arr[8] = 3;
+   myprint(arr)
+   myprint(typeof arr)
+
+   var dob= new Date();
+   myprint(dob.getDate()+"-"+dob.getMonth()+"-"+dob.getFullYear())
+   myprint(typeof dob)
+
+   myprint("--------------")
+   myprint(dob instanceof Date)
+   myprint(dob instanceof Array)
+   myprint(dob instanceof String)
+
+   myprint(arr instanceof Date); 
+ myprint(arr instanceof Array); //T 
+ myprint(arr instanceof String); 
+ myprint("---------------"); 
+ myprint(str instanceof Date); 
+ myprint(str instanceof Array); 
+ myprint(str instanceof String); //T 
+ myprint("---------------"); 
+ myprint(str instanceof Object); 
+ myprint(arr instanceof Object); 
+ myprint(dob instanceof Object); 
+
+    
+</script> 
+</body> 
+</html> 

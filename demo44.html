@@ -1,0 +1,72 @@
+<!DOCTYPE html> 
+<html> <head> 
+<title>JS- Updating DOM </title> 
+<style> 
+div{ 
+margin: 50px; 
+border: 2px solid rgb(67, 12, 218); 
+border-radius: 15px; 
+width: 500px; 
+font-size: 25px; 
+background-color: rgb(154, 204, 234); 
+text-align: center; 
+padding: 15px; 
+color: black;
+font-size: 25px;
+} 
+</style> </head> 
+<body> 
+<div id="mydiv"> </div>
+<script> 
+function myprint(data){
+    var mydiv = document.getElementById("mydiv");
+    mydiv.innerHTML=mydiv.innerHTML+data +"<br/>";
+}
+myprint("<U>Custome objects 5<U/>");
+    function show(){}
+
+    function Customer(cid,cname,emil,phone){
+        this.cid=cid;
+        this.cname=cname;
+        this.emil=emil;
+        this.phone=phone;
+    }
+
+    var cust1 = new Customer(11,"vk","vk@gm",99707);
+    var cust2 = new Customer(11,"vk","vk@gm",99707);
+    var cust3 = new Customer(11,"vk","vk@gm",99707);
+    var cust4 = new Customer();
+
+    myprint(cust1.cid+" "+cust1.cname+" "+cust1.emil+" "+cust1.phone);
+    myprint(cust2.cid+" "+cust2.cname+" "+cust2.emil+" "+cust2.phone);
+    myprint(cust3.cid+" "+cust3.cname+" "+cust3.emil+" "+cust3.phone);
+    myprint(cust4.cid+" "+cust4.cname+" "+cust4.emil+" "+cust4.phone);
+
+    myprint(typeof cust1);
+    myprint(typeof cust2);
+    myprint(typeof cust3);
+    myprint(typeof cust4);
+
+    cust1.accno = 101;
+    cust1.bal = 24008;
+
+    cust2.accno = 102;
+    cust2.bal = 38928;
+
+    myprint(cust1.cid+" "+cust1.cname+" "+cust1.emil+" "+cust1.phone+" "+cust1.accno+" "+cust1.bal);
+    myprint(cust2.cid+" "+cust2.cname+" "+cust2.email+" "+cust2.phone+" " +cust2.accno+" "+cust2.bal); 
+
+    Customer.prototype.branchCode="B-111";
+    Customer.prototype.City="Banglore";
+
+    myprint(cust1.cid+" "+cust1.cname+" "+cust1.emil+" "+cust1.phone+" "+cust1.accno+" "+cust1.bal+" "+cust1.branchCode+" "+cust1.City);
+    myprint(cust2.cid+" "+cust2.cname+" "+cust2.emil+" "+cust2.phone+" "+cust2.accno+" "+cust2.bal+" "+cust2.branchCode+" "+cust2.City);
+
+
+    
+
+    
+    
+
+</script> 
+</body> 

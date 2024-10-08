@@ -1,0 +1,63 @@
+<!DOCTYPE html> 
+<html> <head> 
+<title>JS- Updating DOM </title> 
+<style> 
+div{
+    margin: 50px;
+    border: 2px solid red;
+    border-radius: 10px;
+    width: 600px;
+    font-size: 25px;
+    background-color: aqua;
+    padding-left: 20px;
+}
+
+
+</style> </head> 
+<body onload="formatTime();"> 
+<div id="mydiv"> </div>
+
+<script> 
+function print(data){
+    var mydiv = document.getElementById("mydiv");
+    mydiv.innerHTML=mydiv.innerHTML+data +"<br/>";
+}
+
+print("<u>Array Objects 1</u> ") 
+
+var arr = [10,20,30,20,29,288,7,97];
+
+print(arr);
+arr.reverse();
+print(arr)
+
+arr.sort();
+print(arr);
+
+var arr = [10,27,29,29073,94,98,72]
+print(arr);
+
+var x = arr.shift();
+print(x);
+
+var x = arr.shift();
+print(x);
+
+var x = arr.shift();
+print(x);
+
+
+var y = arr.unshift(99);
+print(y);
+
+var y = arr.unshift(99);
+print(y)
+
+var y = arr.unshift(99);
+print(y)
+
+
+
+
+</script> 
+</body> 

@@ -1,0 +1,68 @@
+<!DOCTYPE html> 
+<html> <head> 
+<title>JS- Updating DOM </title> 
+<style> 
+div{ 
+margin: 50px; 
+border: 2px solid rgb(67, 12, 218); 
+border-radius: 15px; 
+width: 500px; 
+font-size: 25px; 
+background-color: rgb(154, 204, 234); 
+text-align: center; 
+padding: 15px; 
+color: black;
+font-size: 25px;
+} 
+</style> </head> 
+<body> 
+<div id="mydiv"> </div>
+<script> 
+function myprint(data){
+    var mydiv = document.getElementById("mydiv");
+    mydiv.innerHTML=mydiv.innerHTML+data +"<br/>";
+}
+myprint("<U>Math objects 5<U/>");
+    myprint(Math.sqrt(25));
+    myprint(Math.cbrt(3));
+    myprint(Math.pow(10 ,3));
+    myprint("hello")
+    myprint("---------------------------");
+    myprint(Math.ceil(1.234));
+    myprint(Math.ceil(1.567));
+    myprint(Math.floor(1.232));
+    myprint(Math.floor(1.567));
+    myprint("----------------------------");
+    myprint(Math.round(5.3432));
+    myprint(Math.round(5.6432));
+
+    myprint("------------------------");
+    myprint(Math.sign(-99));
+    myprint(Math.sign(99));
+    myprint("----------------------------");
+    myprint(Math.trunc(123.456));
+
+    myprint(Math.max(10,29,392,3983,2222));
+    myprint(Math.min(382,292,291,192,9,39,9));
+
+    myprint("=----------------------------------");
+    myprint(Math.random());//0&1
+    var num = Math.trunc(Math.random()*10);
+    myprint(num);
+    var num =Math.trunc(Math.random()*100);
+    myprint(num);
+
+    var num =Math.trunc(Math.random()*1000);
+    myprint(num);
+    
+
+
+
+   
+    
+
+    
+    
+
+</script> 
+</body> 

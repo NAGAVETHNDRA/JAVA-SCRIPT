@@ -1,0 +1,69 @@
+<!DOCTYPE html> 
+<html> <head> 
+<title>JS- Updating DOM </title> 
+<style> 
+div{ 
+margin: 50px; 
+border: 2px solid rgb(67, 12, 218); 
+border-radius: 15px; 
+width: 500px; 
+font-size: 25px; 
+background-color: rgb(154, 204, 234); 
+text-align: center; 
+padding: 15px; 
+color: black;
+font-size: 25px;
+} 
+</style> </head> 
+<body> 
+<div id="mydiv"> </div>
+<script> 
+function myprint(data){
+    var mydiv = document.getElementById("mydiv");
+    mydiv.innerHTML=mydiv.innerHTML+data +"<br/>";
+}
+myprint("<U>exploring function 7<U/>");
+    var counter = 0;
+    function increment1(){
+        counter++;
+    }
+    increment1();
+    myprint('counter:'+counter);
+    increment1();
+    myprint('counter:'+counter);
+    increment1();
+    myprint('counter:'+counter);
+    myprint('---------------------------');
+
+    counter = counter+5;
+    increment1();
+    myprint('counter:'+counter);
+    myprint('---------------------------------')
+
+    function increment2(){
+        var counter = 0;
+        counter++;
+        return counter;
+
+    }
+   myprint("Counter : "+increment2()); 
+   myprint("Counter : "+increment2()); 
+   myprint("Counter : "+increment2()); 
+  myprint("------------------------------------")
+
+  var increment={
+    function (){
+        var counter = 0;
+        console.log("Hello vk");
+        return function(){
+            counter++;
+            return counter;
+        }
+    }
+  }();
+    myprint("counter:"+increment());
+    myprint("counter:"+increment());
+    myprint("counter:"+increment());
+    myprint('done');
+</script> 
+</body> 

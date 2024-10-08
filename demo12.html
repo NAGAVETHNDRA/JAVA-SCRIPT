@@ -1,0 +1,61 @@
+<!DOCTYPE html> 
+<html> <head> 
+<title>JS- Updating DOM </title> 
+<style> 
+div{ 
+margin: 50px; 
+border: 2px solid rgb(67, 12, 218); 
+border-radius: 15px; 
+width: 500px; 
+font-size: 25px; 
+background-color: rgb(154, 204, 234); 
+text-align: center; 
+padding: 15px; 
+color: black;
+font-size: 25px;
+} 
+</style> </head> 
+<body> 
+<div id="mydiv"> </div>
+<script> 
+function myprint(data){
+    var mydiv = document.getElementById("mydiv");
+    mydiv.innerHTML=mydiv.innerHTML+data +"<br/>";
+}
+myprint("<u>Realational Operator<br/><u/>")
+    var a = 10;
+    var b = 20;
+    myprint("a=>"+a);
+    myprint("b=>"+b);
+
+    myprint(" a > 5 =>"+ (a > 5)); 
+myprint(" a > 10 =>"+(a > 10)); 
+myprint(" a >= 10 =>"+ (a >= 10)); 
+myprint(" a < 20 =>"+ (a < 20)); 
+myprint(" a <10 =>"+ (a <10) ); 
+myprint(" a <=10 =>"+ (a <=10) ); 
+
+myprint("-----------------------------------")
+myprint(" a==10 =>"+ (a==10) ); 
+myprint(" a=='10' =>"+ (a=="10") ); 
+myprint(" a==10.0 =>"+ (a==10.0));
+
+myprint("-----------------------------------")
+myprint(" a==10 =>"+ (a===10) ); 
+myprint(" a=='10' =>"+ (a==="10") ); 
+myprint(" a==10.0 =>"+ (a===10.0));
+
+myprint("-----------------------------------")
+myprint(" a==10 =>"+ (a!=10) ); 
+myprint(" a=='10' =>"+ (a!="10") ); 
+myprint(" a==10.0 =>"+ (a!=10.0));
+
+myprint("-----------------------------------")
+myprint(" a==10 =>"+ (a!==10) ); 
+myprint(" a=='10' =>"+ (a!=="10") ); 
+myprint(" a==10.0 =>"+ (a!==10.0));
+
+   
+</script> 
+</body> 
+</html> 

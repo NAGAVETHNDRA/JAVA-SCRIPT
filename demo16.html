@@ -1,0 +1,51 @@
+<!DOCTYPE html> 
+<html> <head> 
+<title>JS- Updating DOM </title> 
+<style> 
+div{ 
+margin: 50px; 
+border: 2px solid rgb(67, 12, 218); 
+border-radius: 15px; 
+width: 500px; 
+font-size: 25px; 
+background-color: rgb(154, 204, 234); 
+text-align: center; 
+padding: 15px; 
+color: black;
+font-size: 25px;
+} 
+</style> </head> 
+<body> 
+<div id="mydiv"> </div>
+<script> 
+function myprint(data){
+    var mydiv = document.getElementById("mydiv");
+    mydiv.innerHTML=mydiv.innerHTML+data +"<br/>";
+}
+myprint("<u> Bitwise Operator<br/><u/>")
+    var a = 19;
+    myprint("a<<1 : "+(a<<1));
+    myprint("a<<2 : "+(a<<2));
+    myprint("a>>1 : "+(a>>1));
+    myprint("a>>1 : "+(a>>1));
+    myprint("---------------------")
+
+    var x = 15;
+    var y = 17;
+
+    myprint("x&y:"+(x&y));
+    myprint("x | y : "+ (x | y)); 
+ myprint("x ^ y : "+ (x ^ y)); 
+ myprint("~x : "+ ( ~x )); 
+ myprint("~y : "+ ( ~y )); 
+/*
+ myprint("0101<<1 : "+ (0101<<1)); 
+ myprint("0101>>1 : "+ (0101>>1)); 
+ myprint("0101>>2 : "+ (0101>>2)); 
+   
+
+*/
+    
+</script> 
+</body> 
+</html> 

@@ -1,0 +1,52 @@
+<!DOCTYPE html> 
+<html> <head> 
+<title>JS- Updating DOM </title> 
+<style> 
+div{ 
+margin: 50px; 
+border: 2px solid rgb(67, 12, 218); 
+border-radius: 15px; 
+width: 500px; 
+font-size: 25px; 
+background-color: rgb(154, 204, 234); 
+text-align: center; 
+padding: 15px; 
+color: black;
+font-size: 25px;
+} 
+</style> </head> 
+<body> 
+<div id="mydiv"> </div>
+<script> 
+function myprint(data){
+    var mydiv = document.getElementById("mydiv");
+    mydiv.innerHTML=mydiv.innerHTML+data +"<br/>";
+}
+
+myprint("<U>exploring function<U/>");
+    function show(){
+        var x=10;
+        myprint(x);
+        myprint("hello welcome")
+        console.log("i am show()")
+    }
+    show();
+   
+    var res = show();
+    myprint(res);
+
+    function sum(a,b){
+        myprint("a :"+typeof(a));
+        myprint("b :"+typeof b);
+        var s = a+b;
+        return s;
+
+    }
+    var res1 = sum(10,30);
+    myprint(res1);
+
+    var res2 = sum(39,39);
+    myprint(res2);
+    
+</script> 
+</body> 

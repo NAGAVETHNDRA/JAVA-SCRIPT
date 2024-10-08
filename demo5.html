@@ -1,0 +1,48 @@
+<!DOCTYPE html> 
+<html> <head> 
+<title>JS- Updating DOM </title> 
+<style> 
+div{ 
+margin: 50px; 
+border: 2px solid red; 
+border-radius: 15px; 
+width: 500px; 
+font-size: 25px; 
+background-color: goldenrod; 
+text-align: center; 
+padding: 15px; 
+} 
+</style> </head> 
+<body> 
+<div id="mydiv"> </div>
+<script> 
+function myprint(data){
+    var mydiv = document.getElementById("mydiv");
+    mydiv.innerHTML=mydiv.innerHTML+data +"<br/>";
+}
+myprint("<u>Topic heading here")
+
+    var x = 10;
+    myprint("x="+x);
+    myprint(typeof(x));
+    var y = 20;
+    myprint(" y="+y);
+    myprint(typeof(y));
+    var total = x+y;
+    myprint(" sum :"+total);
+
+    var z = 99.99;
+    myprint(z);
+    myprint(typeof(z));
+
+    var s = "venktesh";
+    myprint(s);
+    myprint(typeof(s));
+
+    var arr = [10,20,30];
+    myprint(arr);
+    myprint(typeof(arr));
+
+</script> 
+</body> 
+</html> 

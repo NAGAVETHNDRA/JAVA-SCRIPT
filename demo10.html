@@ -1,0 +1,57 @@
+<!DOCTYPE html> 
+<html> <head> 
+<title>JS- Updating DOM </title> 
+<style> 
+div{ 
+margin: 50px; 
+border: 2px solid rgb(67, 12, 218); 
+border-radius: 15px; 
+width: 500px; 
+font-size: 25px; 
+background-color: rgb(154, 204, 234); 
+text-align: center; 
+padding: 15px; 
+color: black;
+font-size: 25px;
+} 
+</style> </head> 
+<body> 
+<div id="mydiv"> </div>
+<script> 
+function myprint(data){
+    var mydiv = document.getElementById("mydiv");
+    mydiv.innerHTML=mydiv.innerHTML+data +"<br/>";
+}
+myprint("<u>Default vals - Constant<br/><u/>")
+    var x;
+    myprint(x)//undifined
+    myprint(typeof x);//undifined
+
+    var a = 10;
+    myprint(a);
+    myprint(typeof a);
+
+    //myprint(y);
+    //myprint(typeof y);
+
+    var x = 20;
+    myprint(x);
+    x = 200;
+    myprint(x);
+
+    let b = 100;
+    myprint(b);
+     b=200;
+    myprint(b);
+
+    const c = 88;
+    myprint(c);
+    //c=55;
+    myprint(c);
+
+
+
+
+</script> 
+</body> 
+</html> 

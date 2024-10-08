@@ -1,0 +1,61 @@
+<!DOCTYPE html> 
+<html> <head> 
+<title>JS- Updating DOM </title> 
+<style> 
+div{ 
+margin: 50px; 
+border: 2px solid rgb(67, 12, 218); 
+border-radius: 15px; 
+width: 500px; 
+font-size: 25px; 
+background-color: rgb(154, 204, 234); 
+text-align: center; 
+padding: 15px; 
+color: black;
+font-size: 25px;
+} 
+</style> </head> 
+<body> 
+<div id="mydiv"> </div>
+<script> 
+function myprint(data){
+    var mydiv = document.getElementById("mydiv");
+    mydiv.innerHTML=mydiv.innerHTML+data +"<br/>";
+}
+myprint("<u>In & Delete Operator<br/><u/>");
+   var arr = new Array(4);
+   arr[0] = 20;
+   arr[1] = 99.99;
+   arr[2] = "hello";
+   arr[3] = true;
+   arr[4] = 88;
+
+   myprint(arr);
+
+   myprint(typeof arr);
+   for(x in arr){
+    myprint(x+" "+arr[x]);
+   }
+
+   myprint(0 in arr); 
+ myprint(1 in arr); 
+ myprint(2 in arr); 
+ myprint(4 in arr); 
+ myprint(5 in arr); 
+
+ myprint("--------------------")
+ myprint(arr.length);
+
+ myprint(arr[3]);
+ delete arr[3];
+ myprint(arr[3]);
+
+ myprint(arr[1]); 
+ delete arr[1]; 
+ myprint(arr[1]); 
+ myprint("---------------"); 
+ myprint(" Array Size - "+arr.length); 
+    
+</script> 
+</body> 
+</html> 

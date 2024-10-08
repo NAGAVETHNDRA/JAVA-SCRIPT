@@ -1,0 +1,68 @@
+<!DOCTYPE html> 
+<html> <head> 
+<title>JS- Updating DOM </title> 
+<style> 
+div{
+    margin: 50px;
+    border: 2px solid red;
+    border-radius: 10px;
+    width: 600px;
+    font-size: 25px;
+    background-color: aqua;
+    padding-left: 20px;
+}
+
+
+</style> </head> 
+<body onload="formatTime();"> 
+<div id="mydiv"> </div>
+
+<script> 
+function myprint(data){
+    var mydiv = document.getElementById("mydiv");
+    mydiv.innerHTML=mydiv.innerHTML+data +"<br/>";
+}
+myprint("<U>String Objects 1<U/>");
+    myprint("welcome");
+
+    var str = "Hello Guys"
+
+    myprint(str.length);
+    myprint(str.charAt(0));
+    myprint(str.charAt(1));
+    myprint(str.charCodeAt(0));
+    myprint(str.charCodeAt(1));
+    myprint(str.charCodeAt(5));
+    myprint("--------------------");
+
+    var str ="Venkatesh";
+    myprint(str.indexOf("s"));
+    myprint(str.includes("r"));
+    myprint(str.indexOf("i"));
+    myprint("--------------------------------");
+
+    myprint(str.lastIndexOf("s")); 
+    myprint(str.lastIndexOf("r")); 
+    myprint(str.lastIndexOf("i")); 
+    myprint("------------------"); 
+
+    var str="Hello Guys"; 
+ myprint(str); 
+ myprint(str.toLocaleLowerCase()); 
+ myprint(str.toLocaleUpperCase()); 
+ myprint(str.toLowerCase()); 
+ myprint(str.toUpperCase()); 
+ myprint("------------------"); 
+ var str1="Hello"; 
+ var str2=str1.concat("Guys"); 
+ myprint(str1); 
+ myprint(str2); 
+ myprint("------------------"); 
+ var str3=str1.repeat(3); 
+ myprint(str3); 
+ myprint("------------------"); 
+ myprint("Done"); 
+
+   
+</script> 
+</body> 

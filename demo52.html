@@ -1,0 +1,65 @@
+<!DOCTYPE html> 
+<html> <head> 
+<title>JS- Updating DOM </title> 
+<style> 
+div{
+    margin: 50px;
+    border: 2px solid red;
+    border-radius: 10px;
+    width: 600px;
+    font-size: 25px;
+    background-color: aqua;
+    padding-left: 20px;
+}
+
+
+</style> </head> 
+<body onload="formatTime();"> 
+<div id="mydiv"> </div>
+
+<script> 
+function myprint(data){
+    var mydiv = document.getElementById("mydiv");
+    mydiv.innerHTML=mydiv.innerHTML+data +"<br/>";
+}
+myprint("<U>String Objects 1<U/>");
+  var str = "Hello Guys How are You Guys Now";
+  var srArr = str.split(" ");
+  myprint(srArr);
+  myprint(srArr.length);
+  myprint("-----------------------");
+
+  var strArray = str.split("Guys"); 
+myprint(strArray); 
+ myprint(strArray.length); 
+ myprint("------------------"); 
+ myprint(str); 
+ var resultString = str.replace("Guys", "Students"); 
+ myprint(str); 
+ myprint(resultString); 
+ var resultString = str.replace("H", "X"); 
+ myprint(str); 
+ myprint(resultString); 
+ myprint("------------------"); 
+ var str = "Hello Guys-CourseCube"; 
+ myprint(str); 
+ var resStr = str.substring(6); 
+ myprint(resStr); 
+ var resStr = str.substring(6, 9); 
+ myprint(resStr); 
+ var resStr = str.substring(6, 10); 
+ myprint(resStr); 
+ myprint("------------------"); 
+ var str = "Hello Guys-CourseCube"; 
+ myprint(str); 
+ var resStr = str.substr(6); 
+ myprint(resStr); 
+ var resStr = str.substr(6, 9); 
+ myprint(resStr); 
+ var resStr = str.substr(6, 10); 
+ myprint(resStr); 
+ myprint("Done"); 
+
+
+</script> 
+</body> 

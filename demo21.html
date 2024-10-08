@@ -1,0 +1,72 @@
+<!DOCTYPE html> 
+<html> <head> 
+<title>JS- Updating DOM </title> 
+<style> 
+div{ 
+margin: 50px; 
+border: 2px solid rgb(67, 12, 218); 
+border-radius: 15px; 
+width: 500px; 
+font-size: 25px; 
+background-color: rgb(154, 204, 234); 
+text-align: center; 
+padding: 15px; 
+color: black;
+font-size: 25px;
+} 
+</style> </head> 
+<body> 
+<div id="mydiv"> </div>
+<script> 
+function myprint(data){
+    var mydiv = document.getElementById("mydiv");
+    mydiv.innerHTML=mydiv.innerHTML+data +"<br/>";
+}
+
+myprint("<U> if state ment<U/>")
+    var a = 20;
+    myprint("a:"+a)
+        if(a>10){
+        myprint("a is >> 10")
+    }
+    else if(a<10){
+        myprint("a is << 10");
+    }
+    else{
+        myprint("a==10")
+    }
+    
+    var a = 500;
+    var  b  = 100;
+    var max;
+
+    if(a>b){
+        max=a;
+       
+    }
+    else if(a==b){
+        max=a,b;
+    }
+    else{
+       max=b ;
+    }
+    myprint(max);
+
+    var a = 100;
+    var b = 200
+    var c = 50;
+    myprint("a: "+a+" b:"+b+" c:"+c);
+    if(a>b && a>c){
+        max = a;
+    }
+    else if(b>c){
+        max = b;
+    }
+    else{
+        max=c;
+    }
+    myprint("max:"+max)
+   
+</script> 
+</body> 
+</html> 

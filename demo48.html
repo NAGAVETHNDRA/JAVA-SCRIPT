@@ -1,0 +1,67 @@
+<!DOCTYPE html> 
+<html> <head> 
+<title>JS- Updating DOM </title> 
+<style> 
+div{ 
+margin: 50px; 
+border: 2px solid rgb(67, 12, 218); 
+border-radius: 15px; 
+width: 500px; 
+font-size: 25px; 
+background-color: rgb(154, 204, 234); 
+text-align: center; 
+padding: 15px; 
+color: black;
+font-size: 25px;
+} 
+</style> </head> 
+<body> 
+<div id="mydiv"> </div>
+<script> 
+function myprint(data){
+    var mydiv = document.getElementById("mydiv");
+    mydiv.innerHTML=mydiv.innerHTML+data +"<br/>";
+}
+myprint("<U>Number objects 2<U/>");
+   var cd = new Date();//cureent Date;
+   myprint(cd);
+
+   var yy = cd.getFullYear();
+   myprint(yy);
+
+   var mm = cd.getMonth();
+   myprint(mm);
+
+   var date = cd.getDate();
+
+   var dd = cd.getDay();
+   myprint(dd);
+
+   myprint(dd+'/'+mm+'/'+yy+':'+date);
+
+   var hh= cd.getHours();
+   var mi = cd.getMinutes();
+   var ss = cd.getSeconds();
+   var ms = cd.getMilliseconds();
+
+   myprint(hh+'-'+mi+'-'+ss+'-'+ms);
+   myprint("getTime():"+cd.getTime())//Timestamp
+
+   var dueDate = new Date();
+   myprint(dueDate);
+
+   dueDate.setDate(5);
+   dueDate.setMonth(1);
+   dueDate.setFullYear(2022);
+   dueDate.setHours(4);
+   dueDate.setMinutes(30);
+   dueDate.setSeconds(20);
+   dueDate.setMilliseconds(5000);
+
+   myprint(dueDate);
+   var dd = new Date(2021,1,5,4,30,30,5000);
+   myprint(dd);
+
+
+</script> 
+</body> 

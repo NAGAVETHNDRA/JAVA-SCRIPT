@@ -1,0 +1,37 @@
+<!DOCTYPE html> 
+<html> <head> 
+<title>JS- Updating DOM </title> 
+<style> 
+div{
+    height: 100px;
+    width: 300px;
+    background-color: bisque;
+    font-size: 50px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+</style> </head> 
+<body onload="formatTime();"> 
+<div id="mydiv"> </div>
+<script> 
+function myprint(data){
+    var mydiv = document.getElementById("mydiv");
+    mydiv.innerHTML=mydiv.innerHTML+data +"<br/>";
+}
+myprint("<U> Date objects 2<U/>");
+    function formatTime(){
+        var cd = new Date();
+        var hh = cd.getHours();
+        var mm = cd.getMinutes();
+        var ss = cd.getSeconds();
+        var dstr =hh+":"+mm+":"+ss;
+
+        document.getElementById("mydiv").innerHTML=dstr;
+        setTimeout("formatTime()",1000);
+
+    }
+   
+   
+</script> 
+</body> 
